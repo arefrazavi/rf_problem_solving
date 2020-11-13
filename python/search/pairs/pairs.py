@@ -18,7 +18,7 @@ def pairs(difference, arr):
     return difference_count
 
 
-file_path = '/problems/search/pairs/input.txt'
+file_path = 'input'
 file = open(file_path, 'r')
 file_content = file.read()
 rows = file_content.split('\n')

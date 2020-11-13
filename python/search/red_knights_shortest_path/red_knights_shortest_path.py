@@ -77,7 +77,7 @@ def get_cell_id(i, j):
     return round((1/2 * (i + j) * (i + j + 1)) + i, 2)
 
 if __name__ == '__main__':
-    file_path = '/home/aref/Code/practice_python/problems/search/red_knights_shortest_path/input.txt'
+    file_path = 'input'
     file = open(file_path, 'r')
     file_content = file.read()
     rows = file_content.split('\n')

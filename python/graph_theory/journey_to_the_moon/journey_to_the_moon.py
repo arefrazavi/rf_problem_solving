@@ -56,7 +56,7 @@ def dfs_explore(node, same_country_astronauts, visited):
             dfs_explore(neighbor_node, same_country_astronauts, visited)
 
 
-file_path = '/home/aref/Code/practice_python/problems/graph_theory/journey_to_the_moon/input'
+file_path = 'input'
 file = open(file_path, 'r')
 file_content = file.read()
 rows = file_content.split('\n')

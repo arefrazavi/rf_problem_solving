@@ -25,7 +25,7 @@ def taskScheduling(d, m):
 
 
 if __name__ == '__main__':
-    file_path = '/home/aref/Code/practice_python/problems/search/task_scheduling/input.txt'
+    file_path = 'input'
     file = open(file_path, 'r')
     file_content = file.read()
     rows = file_content.split('\n')

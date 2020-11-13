@@ -63,7 +63,7 @@ def countInversions(arr):
     return inversion_count
 
 
-file_path = '/home/aref/Code/practice_python/problems/sorting/merge_sort_counting_inversions/input.txt'
+file_path = 'input'
 file = open(file_path, 'r')
 file_content = file.read()
 rows = file_content.split('\n')

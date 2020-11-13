@@ -45,7 +45,7 @@ def extremumPermutations(n, a, b):
     return sum(perm_count[n].values()) % 1000000007
 
 
-file_path = '/home/aref/Code/practice_python/problems/dynamic_programming/extremum_permutations/input.txt'
+file_path = 'input'
 file = open(file_path, 'r')
 file_content = file.read()
 rows = file_content.split('\n')
