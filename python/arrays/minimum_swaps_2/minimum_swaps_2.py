@@ -7,7 +7,7 @@ from pprint import pprint
 def minimumSwaps(arr):
     arr_len = len(arr)
 
-    # pos_value_arr keeps the three piece of information about every element in given arr:
+    # pos_value_arr keeps the three piece of information about every element in given nodes:
     # position in sorted version, (original position, value)
     pos_value_arr = [*enumerate(arr)]
     pos_value_arr.sort(key=lambda item: item[1])
@@ -24,7 +24,7 @@ def minimumSwaps(arr):
             # i => pos_value_arr[j][0] is one edge of the cycle.
             cycle_size += 1
             j = pos_value_arr[j][0]
-        # If there is any cycle, number of swaps for the cycle is (cycle size - 1).
+        # If there is any cycle, number of swaps for the cycle is (cycle nodes_count - 1).
         if cycle_size > 0:
             swaps_count += cycle_size - 1
 

@@ -2,7 +2,7 @@
 # Complete the 'countPairs' function below.
 #
 # The function is expected to return a LONG_INTEGER.
-# The function accepts INTEGER_ARRAY arr as parameter.
+# The function accepts INTEGER_ARRAY nodes as parameter.
 #
 def is_pow_of_two(number):
     return (number and (not(number & (number - 1))))
