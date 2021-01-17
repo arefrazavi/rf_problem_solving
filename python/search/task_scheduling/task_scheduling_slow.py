@@ -1,6 +1,7 @@
 #!/bin/python3
 
 from pprint import pprint
+import bisect
 
 #
 # Complete the taskScheduling function below.
@@ -8,11 +9,12 @@ from pprint import pprint
 tasks = []
 def taskScheduling(d, m):
     global tasks
-    task = [d, m]
-    tasks.append(task)
-    # tasks = sorted(tasks, key=lambda item: (item[0], item[1]))
-    tasks.sort(key=lambda item: (item[0], item[1]))
+    task = (d, m)
+    # Sort task by deadline and then minutes.
+    #tasks.append(task)
+    #tasks.sort(key=lambda item: (item[0], item[1]))
 
+    bisect.insort(tasks, task)
     time = 0
     max_overshoot_time = 0
     for task in tasks:

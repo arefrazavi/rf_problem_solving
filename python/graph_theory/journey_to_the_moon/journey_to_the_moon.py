@@ -10,6 +10,7 @@ from collections import defaultdict
 
 sys.setrecursionlimit(1500)
 
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -40,7 +41,7 @@ def journeyToMoon(n, same_country_astronaut):
             astronauts_by_country.append(same_country_astronauts)
 
     # pprint(astronauts_by_country)
-    different_country_pair_count = (n * (n-1)) / 2
+    different_country_pair_count = (n * (n - 1)) / 2
     for same_country_astronauts in astronauts_by_country:
         same_country_astronauts_len = len(same_country_astronauts)
         different_country_pair_count -= same_country_astronauts_len * (same_country_astronauts_len - 1) / 2
@@ -56,18 +57,19 @@ def dfs_explore(node, same_country_astronauts, visited):
             dfs_explore(neighbor_node, same_country_astronauts, visited)
 
 
-file_path = 'input'
-file = open(file_path, 'r')
-file_content = file.read()
-rows = file_content.split('\n')
+if __name__ == '__main__':
+    file_path = 'input'
+    file = open(file_path, 'r')
+    file_content = file.read()
+    rows = file_content.split('\n')
 
-np = rows[0].split()
-n = int(np[0])
-p = int(np[1])
-astronaut = []
-for i in range(p):
-    astronaut.append(list(map(int, rows[i+1].rstrip().split())))
+    np = rows[0].split()
+    n = int(np[0])
+    p = int(np[1])
+    astronaut = []
+    for i in range(p):
+        astronaut.append(list(map(int, rows[i + 1].rstrip().split())))
 
-result = journeyToMoon(n, astronaut)
+    result = journeyToMoon(n, astronaut)
 
-print(result)
+    print(result)

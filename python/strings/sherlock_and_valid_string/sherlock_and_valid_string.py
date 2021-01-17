@@ -3,13 +3,15 @@
 import os
 from collections import defaultdict, Counter
 
+
 def get_mode(arr):
     items_count = Counter(arr)
     return items_count.most_common(1)[0][0]
 
+
 # Complete the isValid function below.
 def isValid(string):
-    chars_freq = defaultdict(lambda:0)
+    chars_freq = defaultdict(lambda: 0)
     # Enumerate frequency of every character in the given string.
     for char in string:
         chars_freq[char] += 1
@@ -35,6 +37,7 @@ def isValid(string):
             break
 
     return is_valid
+
 
 if __name__ == '__main__':
     file_path = 'input'

@@ -14,7 +14,7 @@ def minimumSwaps(arr):
 
     swaps_count = 0
     visited = {}
-    # Find the exlusive cycles of elements which must be swapped in order to be in their sorted postions  -> O(n)
+    # Find the exclusive cycles of elements which must be swapped in order to be in their sorted positions  -> O(n)
     for i in range(arr_len):
         j = i
         # Number of edges in a cycle.

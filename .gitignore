@@ -1,2 +1,2 @@
-.idea/
-amazon/
+**/.idea/
+**/Pipfile
